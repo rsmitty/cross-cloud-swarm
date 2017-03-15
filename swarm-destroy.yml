@@ -1,0 +1,5 @@
+- name: Leave Swarm
+  hosts: swarm-master:swarm-nodes
+  gather_facts: yes
+  tasks:
+    - command: "docker swarm leave --force"
